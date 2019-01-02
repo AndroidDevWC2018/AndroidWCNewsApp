@@ -18,6 +18,7 @@ class _ShowNews extends State<ShowNews> {
 
   @override
   Widget build(BuildContext context) {
+    // TODO: Implement Database Functionality
     return Container(
         color: Colors.grey[200], child: Cards(name, description, information));
   }

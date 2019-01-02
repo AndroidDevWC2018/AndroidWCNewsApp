@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class QuickLinks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    //TODO: Work on cleaning up the logos, was thinking of using the icons class with round buttons
     return Container(
       margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
       padding: EdgeInsets.all(3.0),
