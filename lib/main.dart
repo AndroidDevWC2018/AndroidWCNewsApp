@@ -3,10 +3,19 @@ import 'package:flutter/material.dart';
 import './news_manager.dart';
 import './quick_link.dart';
 import './drawer.dart';
+import './important_info.dart';
+import './sports.dart';
+import './settings.dart';
+import './information.dart';
+import './clubs.dart';
 
 void main() => runApp(StartNews());
 
 class StartNews extends StatelessWidget {
+  bool isLoggedIn = true;
+  final String name = "Administrator";
+  final String email = "admin@gmail.com";
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -31,7 +40,16 @@ class StartNews extends StatelessWidget {
           )
         ],
       ),
-      drawer: DrawerBuild(),
-    ));
+      drawer: DrawerBuild(isLoggedIn, name, email),
+      
+    ),
+    routes: <String, WidgetBuilder>{
+      "IInfo": (BuildContext context) => ImportantInfo(),
+      "Sports": (BuildContext context) => Sports(),
+      "Information": (BuildContext context) => Information(),
+      "Clubs": (BuildContext context) => Clubs(),
+      "Settings": (BuildContext context) => Settings(),
+    },
+    );
   }
 }
