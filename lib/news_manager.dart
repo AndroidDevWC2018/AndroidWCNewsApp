@@ -6,6 +6,7 @@ import './quick_link.dart';
 class ShowNews extends StatefulWidget {
   State<StatefulWidget> createState() {
     return _ShowNews();
+    
   }
 }
 
