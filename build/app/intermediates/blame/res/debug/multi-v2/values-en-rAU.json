@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/niko001/flutter-projects/wchs_news/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml",
+            "map": [
+                {
+                    "source": "/home/niko001/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a945b363b2e4b935d786d8709f439547/res/values-en-rAU/values-en-rAU.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

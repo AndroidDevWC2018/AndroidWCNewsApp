@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "857966292007",
+    "firebase_url": "https://wilsoncentralnewsapp.firebaseio.com",
+    "project_id": "wilsoncentralnewsapp",
+    "storage_bucket": "wilsoncentralnewsapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857966292007:android:854562ffc4dfaa2d",
+        "android_client_info": {
+          "package_name": "com.example.wchsnews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "857966292007-t48llq1iscln7tn5l33otjum678dkrqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDx8t8y6o7x1U4OTddxkLxrS7sMh4NKYo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
