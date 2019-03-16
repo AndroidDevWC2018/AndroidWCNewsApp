@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Cards extends StatelessWidget {
   final List<String> _Name;
@@ -9,9 +10,18 @@ class Cards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: ListView(
-      children: _Name.map((element) => Card(
+
+    return StreamBuilder<QuerySnapshot>(
+      stream: Firestore.instance.collection('posts').snapshots(),
+      builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+        if (snapshot.hasError)
+          return new Text('Error: ${snapshot.error}');
+        switch (snapshot.connectionState) {
+          case ConnectionState.waiting: return new Text('Loading...');
+          default:
+            return new ListView(
+              children: snapshot.data.documents.map((DocumentSnapshot document) {
+                return new  Card(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0)),
             child: Container(
@@ -28,14 +38,14 @@ class Cards extends StatelessWidget {
                         children: <Widget>[
                           Container(
                             margin: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 7.0),
-                            child: Text(element,
+                            child: Text(document['Name'],
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 23.0)),
                           ),
                           Container(
                             margin: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0.0),
-                            child: Text(_Description[_Name.indexOf(element)],
+                            child: Text(document['Description'],
                                 style: TextStyle(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 17.0)),
@@ -46,13 +56,17 @@ class Cards extends StatelessWidget {
                   ),
                   Container(
                     margin: EdgeInsets.fromLTRB(15.0, 10.0, 10.0, 20.0),
-                    child: Text(_Information[_Name.indexOf(element)],
+                    child: Text(document['Information'],
                         style: TextStyle(fontSize: 15.0)),
                   ),
                 ],
               ),
             ),
           )).toList(),
-    ));
+            );
+        }
+      },
+    );
+
   }
 }

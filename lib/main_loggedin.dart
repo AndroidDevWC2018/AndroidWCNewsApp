@@ -17,8 +17,7 @@ class LoggedIn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title:
             Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
@@ -44,15 +43,6 @@ class LoggedIn extends StatelessWidget {
         onPressed: ()=>Navigator.of(context).pushNamed("CreatePost"),
         child: Icon(Icons.add),
       ),
-    ),
-    routes: <String, WidgetBuilder>{
-      "IInfo": (BuildContext context) => ImportantInfo(),
-      "Sports": (BuildContext context) => Sports(),
-      "Information": (BuildContext context) => Information(),
-      "Clubs": (BuildContext context) => Clubs(),
-      "Settings": (BuildContext context) => Settings(),
-      "CreatePost": (BuildContext context) => CreatePost()
-    },
     );
   }
 }

@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+import './important_info.dart';
+import './sports.dart';
+import './information.dart';
+import './clubs.dart';
+import './settings.dart';
 
 class DrawerBuild extends StatelessWidget{
   bool _isLoggedIn = false;
@@ -31,28 +36,28 @@ class DrawerBuild extends StatelessWidget{
             ListTile(
               title: Text("Importsnt Info"),
               trailing: Icon(Icons.notification_important),
-              onTap: ()=>Navigator.of(context).pushNamed("IInfo"),
+              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ImportantInfo())),
             ),
             ListTile(
               title: Text("Sports"),
               trailing: Icon(Icons.directions_bike),
-              onTap: ()=>Navigator.of(context).pushNamed("Sports"),
+              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Sports())),
             ),
             ListTile(
               title: Text("Information"),
               trailing: Icon(Icons.info),
-              onTap: ()=>Navigator.of(context).pushNamed("Information"),
+              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Information())),
             ),
             ListTile(
               title: Text("Clubs"),
               trailing: Icon(Icons.group),
-              onTap: ()=>Navigator.of(context).pushNamed("Clubs"),
+              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Clubs())),
             ),
             Divider(),
             ListTile(
               title: Text("Settings"),
               trailing: Icon(Icons.settings),
-              onTap: ()=>Navigator.of(context).pushNamed("Settings"),
+              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Settings())),
             ),
             _isLoggedIn == true ? ListTile(
               title: Text("Log Out"),

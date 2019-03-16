@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/niko001/flutter-projects/wchs_news/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-tr/values-tr.xml",
+            "outputFile": "C:\\Users\\Christian\\Desktop\\flutter-projects\\AndroidWCNewsApp\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-tr\\values-tr.xml",
             "map": [
                 {
-                    "source": "/home/niko001/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e1630270e04826fbee640130ecae3b32/res/values-tr/values.xml",
+                    "source": "C:\\Users\\Christian\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\4768f630347f4be27a881a94ed4a8f64\\res\\values-tr\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/niko001/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a945b363b2e4b935d786d8709f439547/res/values-tr/values-tr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "2845",
-                        "endColumns": "100",
-                        "endOffsets": "2941"
-                    }
-                },
-                {
-                    "source": "/home/niko001/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/cc5b50e1f62bd2f30608a8ccc87fb1a1/res/values-tr/values.xml",
+                    "source": "C:\\Users\\Christian\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.0.1.aar\\02b3915d69267480709beeef2e2e8025\\res\\values-tr\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -52,6 +35,23 @@
                         "startOffsets": "1279",
                         "endColumns": "205",
                         "endOffsets": "1480"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Christian\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\48d34f19d0ca0a32826a924bd3ddb61c\\res\\values-tr\\values-tr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "2845",
+                        "endColumns": "100",
+                        "endOffsets": "2941"
                     }
                 }
             ]

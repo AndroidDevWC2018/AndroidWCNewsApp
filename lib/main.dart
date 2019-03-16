@@ -1,50 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-import './main_anonymous.dart';
-import './main_loggedin.dart';
 
-void main() => runApp(StartNews());
+void main() => runApp(NewApp());
 
-class StartNews extends StatelessWidget {
-  @override
+class NewApp extends StatelessWidget {
+ @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Column(
-          children: <Widget>[
-            Image.asset(
-              'assets/WCLogo.png',
-              width: double.infinity/0.75,
-            ),
-            OutlineButton(
-              onPressed: ()=>Navigator.of(context).pushReplacementNamed("LoggedIn"),
-              child: Container(
-                child: Text("Staff"),
-                width: double.infinity,
-              ),
-              splashColor: Colors.blueAccent,
-              borderSide: BorderSide(color: Colors.blue),
-              shape: new RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30.0)),
-              
-            ),
-            OutlineButton(
-              onPressed: ()=>Navigator.of(context).pushReplacementNamed("Anonymous"),
-              child: Container(
-                child: Text("Student"),
-                width: double.infinity,
-              ),
-              splashColor: Colors.blueAccent,
-              borderSide: BorderSide(color: Colors.blue),
-              shape: new RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30.0)),
-            )
-          ],
+        appBar: AppBar(
+          title: Text("Test"),
         ),
+        body: GetData(),
       ),
-      routes: <String, WidgetBuilder>{
-        "LoggedIn": (BuildContext context) => LoggedIn(),
-        "Anonymous": (BuildContext context) => NotLoggedIn()
+    );
+  }
+}
+
+class GetData extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return StreamBuilder<QuerySnapshot>(
+      stream: Firestore.instance.collection('posts').snapshots(),
+      builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+        if (snapshot.hasError)
+          return new Text('Error: ${snapshot.error}');
+        switch (snapshot.connectionState) {
+          case ConnectionState.waiting: return new Text('Loading...');
+          default:
+            return new ListView(
+              children: snapshot.data.documents.map((DocumentSnapshot document) {
+                return new ListTile(
+                  title: new Text(document['Name']),
+                  subtitle: new Text(document['Description']),
+                );
+              }).toList(),
+            );
+        }
       },
     );
   }

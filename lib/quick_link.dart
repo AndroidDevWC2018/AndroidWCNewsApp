@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+import './important_info.dart';
+import './sports.dart';
+import './information.dart';
+import './clubs.dart';
+import './settings.dart';
+
 class QuickLinks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,7 +26,7 @@ class QuickLinks extends StatelessWidget {
               borderSide: BorderSide(color: Colors.blue),
               shape: new RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0)),
-              onPressed: ()=>Navigator.of(context).pushNamed("IInfo"),
+              onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ImportantInfo())),
               child: Row(children: <Widget>[
                 Icon(
                   Icons.notification_important,
@@ -38,7 +44,7 @@ class QuickLinks extends StatelessWidget {
               borderSide: BorderSide(color: Colors.blue),
               shape: new RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0)),
-              onPressed: ()=>Navigator.of(context).pushNamed("Sports"),
+              onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Sports())),
               child: Row(children: <Widget>[
                 Icon(
                   Icons.directions_bike,
@@ -56,7 +62,7 @@ class QuickLinks extends StatelessWidget {
               borderSide: BorderSide(color: Colors.blue),
               shape: new RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0)),
-              onPressed: ()=>Navigator.of(context).pushNamed("Information"),
+              onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Information())),
               child: Row(children: <Widget>[
                 Icon(
                   Icons.info,
@@ -74,7 +80,7 @@ class QuickLinks extends StatelessWidget {
               borderSide: BorderSide(color: Colors.blue),
               shape: new RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0)),
-              onPressed: ()=>Navigator.of(context).pushNamed("Clubs"),
+              onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Clubs())),
               child: Row(children: <Widget>[
                 Icon(
                   Icons.group,

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/niko001/flutter-projects/wchs_news/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml",
+            "outputFile": "C:\\Users\\Christian\\Desktop\\flutter-projects\\AndroidWCNewsApp\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rIN\\values-en-rIN.xml",
             "map": [
                 {
-                    "source": "/home/niko001/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a945b363b2e4b935d786d8709f439547/res/values-en-rIN/values-en-rIN.xml",
+                    "source": "C:\\Users\\Christian\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\48d34f19d0ca0a32826a924bd3ddb61c\\res\\values-en-rIN\\values-en-rIN.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
